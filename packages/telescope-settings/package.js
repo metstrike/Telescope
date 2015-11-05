@@ -12,7 +12,8 @@ Package.onUse(function(api) {
 
   api.use([
     'telescope:lib@0.25.5', 
-    'telescope:i18n@0.25.5'
+    'telescope:i18n@0.25.5',
+    'metstrike:meteor-oracle@0.1.0'
   ]);
 
   api.addFiles([

@@ -2,7 +2,8 @@
  * The global namespace for Comments.
  * @namespace Comments
  */
-Comments = new Mongo.Collection("comments");
+Comments = new Oracle.Collection("comments");
+if(Meteor.isServer) Comments.setOracleOptions({sqlDebug: true});
 
 /**
  * Comments schema

@@ -1,4 +1,5 @@
-Events = new Mongo.Collection('events');
+Events = new Oracle.Collection('events');
+if(Meteor.isServer) Events.setOracleOptions({sqlDebug: true});
 
 Events.schema = new SimpleSchema({
   createdAt: {
@@ -11,7 +12,7 @@ Events.schema = new SimpleSchema({
     type: String,
     optional: true
   },
-  unique: {
+  isUnique: {
     type: Boolean,
     optional: true
   },
@@ -37,7 +38,7 @@ if (Meteor.isServer) {
   Events.log = function (event) {
 
     // if event is supposed to be unique, check if it has already been logged
-    if (!!event.unique && !!Events.findOne({name: event.name})) {
+    if (!!event.isUnique && !!Events.findOne({name: event.name})) {
       return;
     }
 

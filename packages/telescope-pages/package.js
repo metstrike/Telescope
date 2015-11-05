@@ -9,7 +9,8 @@ Package.onUse(function(api) {
 
   api.versionsFrom("METEOR@1.0");
   
-  api.use(['telescope:core@0.25.5']);
+  api.use(['telescope:core@0.25.5',
+           'metstrike:meteor-oracle@0.1.0']);
 
   api.addFiles([
     'lib/pages.js',

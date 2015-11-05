@@ -1,4 +1,5 @@
-Pages = new Mongo.Collection('pages');
+Pages = new Oracle.Collection('pages');
+if(Meteor.isServer) Pages.setOracleOptions({sqlDebug: true});
 
 Telescope.subscriptions.preload('pages');
 

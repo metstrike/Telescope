@@ -3,4 +3,4 @@
  * @namespace Posts
  */
 Posts = new Oracle.Collection("posts");
-if(Meteor.isServer) Posts.setOracleOptions({sqlDebug: true});
+if(Meteor.isServer) Oracle.setDefaultOracleOptions({sqlDebug: false});

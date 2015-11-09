@@ -3,7 +3,6 @@
  * @namespace Settings
  */
 Settings = new Oracle.Collection("settings");
-if(Meteor.isServer) Settings.setOracleOptions({sqlDebug: true});
 
 Settings.schema = new SimpleSchema({
   title: {

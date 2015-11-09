@@ -1,5 +1,4 @@
 Events = new Oracle.Collection('events');
-if(Meteor.isServer) Events.setOracleOptions({sqlDebug: true});
 
 Events.schema = new SimpleSchema({
   createdAt: {

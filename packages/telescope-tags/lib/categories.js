@@ -1,5 +1,4 @@
 Categories = new Oracle.Collection("categories");
-if(Meteor.isServer) Categories.setOracleOptions({sqlDebug: true});
 
 // category schema
 Categories.schema = new SimpleSchema({

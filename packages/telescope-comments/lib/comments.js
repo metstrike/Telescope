@@ -3,7 +3,6 @@
  * @namespace Comments
  */
 Comments = new Oracle.Collection("comments");
-if(Meteor.isServer) Comments.setOracleOptions({sqlDebug: true});
 
 /**
  * Comments schema

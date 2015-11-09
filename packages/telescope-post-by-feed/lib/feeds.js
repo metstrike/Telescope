@@ -1,5 +1,4 @@
 Feeds = new Oracle.Collection('feeds');
-if(Meteor.isServer) Feeds.setOracleOptions({sqlDebug: true});
 
 Feeds.schema = new SimpleSchema({
   url: {
